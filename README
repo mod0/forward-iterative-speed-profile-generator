@@ -1,0 +1,12 @@
+Author: mod0
+
+This is the octave implementation of a very basic version of speed profile generator. 
+It takes as input the length of moving object, length of tracks (edges/roads in the network),
+varying speed limits along the tracks/edges/roads, varying acceleration/deceleration profiles
+and calculates the most optimal speed profile to cover the distance in shortest time also 
+given the boundary conditions - entry and exit speed.
+
+I call it forward-iterative because its part of a bigger solver that also takes into account
+blocking constraints - like if the roads/tracks are already completely occupied, then its 
+taken into account too - but the solver only iterates from the start to the end (hence forward).
+There is no backtracking in the full blown solver.
